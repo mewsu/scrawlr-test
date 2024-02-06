@@ -14,7 +14,7 @@ const UpvoteContainer: React.FC<UpvoteContainerProps> = ({ id }) => {
   // save to localStorage whenever upvotes change
   useEffect(() => {
     localStorage.setItem(idString, JSON.stringify(upvotes));
-  }, [upvotes]);
+  }, [upvotes, idString]);
 
   const handleAddClick = () => {
     // add another upvote
